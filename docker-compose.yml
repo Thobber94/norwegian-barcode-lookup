@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  maria-db:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: barcode-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+      - MYSQL_DATABASE=barcode
